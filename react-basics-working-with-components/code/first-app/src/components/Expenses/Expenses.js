@@ -16,7 +16,9 @@ const Expenses = ({ expenses }) => {
         selected={filteredYear}
         onChangeFilter={filterChangeHandler}
       />
-      <ExpenseItem expenses={expenses[0]} />
+      {expenses.map((expense) => (
+        <ExpenseItem expenses={expense} key={expense.id} />
+      ))}
     </Card>
   );
 };
