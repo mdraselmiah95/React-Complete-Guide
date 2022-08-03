@@ -30,6 +30,13 @@ const DEMO_EXPENSES = [
   },
 ];
 
+// return React.createElement(
+//   'div',
+//   {},
+//   React.createElement('h2', {}, "Let's get started!"),
+//   React.createElement(Expenses, { items: expenses })
+// );
+
 function App() {
   const [expenses, setExpenses] = useState(DEMO_EXPENSES);
 
@@ -40,7 +47,7 @@ function App() {
   };
   return (
     <div>
-      {/* <h2>Let's get started!</h2> */}
+      <h2 className="Heading">Let's get started!</h2>
       <NewExpense onAddExpenses={addExpenseHandler} />
       <Expenses expenses={expenses} />
     </div>
