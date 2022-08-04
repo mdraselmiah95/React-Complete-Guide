@@ -1,7 +1,7 @@
 import React from "react";
 import "./Chart.css";
-const Chart = () => {
-  return <div>Chart</div>;
+const Chart = (props) => {
+  return <div>This is a chart.</div>;
 };
 
 export default Chart;
