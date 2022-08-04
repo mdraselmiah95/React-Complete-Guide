@@ -3,6 +3,7 @@ import "./App.css";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 
+//Demo expenses
 const DEMO_EXPENSES = [
   {
     id: "e1",
