@@ -6,6 +6,7 @@ import "./ExpenseItem.css";
 const ExpenseItem = (props) => {
   const { title, amount, date } = props;
   return (
+    // Card Component
     <Card className="expense-item">
       <ExpenseDate date={date} />
       <div className="expense-item__description">
