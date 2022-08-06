@@ -17,3 +17,8 @@ class App extends Component{
         return <h1>This is Great, It is working.</h1>
     }
 }
+
+//There are Two Different ways to create React Component:
+
+1. Class Based Components / Stateful Components / Smart Component
+2. Functional Component / Stateless Component / Dumb Component
