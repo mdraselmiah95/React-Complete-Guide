@@ -1,0 +1,19 @@
+import React, { Component} from 'react';
+
+class App extends Component{
+
+    //Data and Logical Layer (Optional)
+
+    * 1. State
+    * 2. Variable or Properties
+    * 3. Function or Method
+    * 4. Life Cycle Method
+
+    // Representation Layer (Required)
+
+    * 1. JSX
+
+    render(){
+        return <h1>This is Great, It is working.</h1>
+    }
+}
