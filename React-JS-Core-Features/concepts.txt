@@ -1,5 +1,8 @@
 import React, { Component} from 'react';
 
+
+//Class Component
+
 class App extends Component{
 
     //Data and Logical Layer (Optional)
@@ -22,3 +25,14 @@ class App extends Component{
 
 1. Class Based Components / Stateful Components / Smart Component
 2. Functional Component / Stateless Component / Dumb Component
+
+
+//Functional Component
+
+function MyFunction(){
+    return <h1>This is Function</h1>
+}
+
+const OtherFunctionalComponent=()=>{
+    <h1>This is Another  Functional component.</h1>
+}
