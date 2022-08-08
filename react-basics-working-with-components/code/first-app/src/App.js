@@ -49,6 +49,7 @@ function App() {
   return (
     <div>
       <h2 className="Heading">Let's get started!</h2>
+      {/* passing data by props */}
       <NewExpense onAddExpenses={addExpenseHandler} />
       <Expenses expenses={expenses} />
     </div>
