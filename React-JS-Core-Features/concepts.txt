@@ -26,7 +26,6 @@ class App extends Component{
 1. Class Based Components / Stateful Components / Smart Component
 2. Functional Component / Stateless Component / Dumb Component
 
-
 //Functional Component
 
 function MyFunction(){
@@ -34,5 +33,5 @@ function MyFunction(){
 }
 
 const OtherFunctionalComponent=()=>{
-    <h1>This is Another  Functional component.</h1>
+   return <h1>This is Another  Functional component.</h1>
 }
