@@ -16,7 +16,9 @@
   display: flex;
   gap: 1rem;
 }
-
+.main {
+  padding: 3rem;
+}
 .footer {
   background-color: rgb(214, 196, 196);
   padding: 2rem 0;

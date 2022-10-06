@@ -4,7 +4,9 @@ import Layout from "./components/layout/Layout";
 function App() {
   return (
     <>
-      <Layout></Layout>
+      <Layout>
+        <h2>This is main content area.</h2>
+      </Layout>
     </>
   );
 }
