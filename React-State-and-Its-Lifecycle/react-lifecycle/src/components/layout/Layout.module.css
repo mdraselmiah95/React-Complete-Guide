@@ -1,0 +1,25 @@
+.nav {
+  width: auto;
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand {
+  font-size: 20px;
+  font-weight: 600;
+}
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.footer {
+  background-color: rgb(214, 196, 196);
+  padding: 2rem 0;
+  text-align: center;
+  font-size: small;
+}
