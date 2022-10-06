@@ -1,8 +1,8 @@
 import React from "react";
 import classes from "./Layout.module.css";
 
-const Layout = (props) => {
-  //   console.log(props);
+const Layout = ({ children }) => {
+  //   console.log(props:{children});
   return (
     <div>
       <nav className={classes.nav}>
@@ -15,7 +15,7 @@ const Layout = (props) => {
           </ul>
         </div>
       </nav>
-      <main className={classes.main}>{props.children}</main>
+      <main className={classes.main}>{children}</main>
       <footer className={classes.footer}>
         <p>This page &#169; by Rasel mia</p>
       </footer>
