@@ -1,3 +1,4 @@
+import { Link } from "@reach/router";
 import React from "react";
 import classes from "./Layout.module.css";
 
@@ -9,9 +10,15 @@ const Layout = ({ children }) => {
         <div className={classes.brand}>Brand Name</div>
         <div className={classes.menu}>
           <ul>
-            <li>Link One</li>
-            <li>Link Two</li>
-            <li>Link Three</li>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/help">Help</Link>
+            </li>
           </ul>
         </div>
       </nav>
