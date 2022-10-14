@@ -2,7 +2,7 @@ import { Link } from "@reach/router";
 import React from "react";
 import classes from "./Layout.module.css";
 
-const Layout = ({ children }) => {
+const Layout = (props) => {
   //   console.log(props:{children});
   return (
     <div>
@@ -13,16 +13,18 @@ const Layout = ({ children }) => {
             <li>
               <Link to="/">Home</Link>
             </li>
+
             <li>
               <Link to="about">About</Link>
             </li>
+
             <li>
               <Link to="help">Help</Link>
             </li>
           </ul>
         </div>
       </nav>
-      <main className={classes.main}>{children}</main>
+      <main className={classes.main}>{props.children}</main>
       <footer className={classes.footer}>
         <p>This page &#169; by Rasel mia</p>
       </footer>
