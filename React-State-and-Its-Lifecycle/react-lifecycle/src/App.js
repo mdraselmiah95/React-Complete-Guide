@@ -1,13 +1,17 @@
 import "./App.css";
 import Layout from "./components/layout/Layout";
+import { Router, Link } from "@reach/router";
+import Home from "./pages/Home";
+import About from "./pages/About";
 
 function App() {
   return (
-    <>
+    <Router>
       <Layout>
-        <h2>This is main content area.</h2>
+        <Home path="/" />
+        <About path="/about" />
       </Layout>
-    </>
+    </Router>
   );
 }
 
