@@ -14,10 +14,10 @@ const Layout = ({ children }) => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="about">About</Link>
             </li>
             <li>
-              <Link to="/help">Help</Link>
+              <Link to="help">Help</Link>
             </li>
           </ul>
         </div>

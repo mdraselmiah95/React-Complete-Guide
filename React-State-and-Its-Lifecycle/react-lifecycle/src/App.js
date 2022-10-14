@@ -8,8 +8,8 @@ function App() {
   return (
     <Router>
       <Home path="/" />
-      <About path="/about" />
-      <Help path="/help" />
+      <About path="about" />
+      <Help path="help" />
     </Router>
   );
 }
