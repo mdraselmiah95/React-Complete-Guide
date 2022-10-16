@@ -1,4 +1,4 @@
-import { Link } from "@reach/router";
+import { NavLink } from "react-router-dom";
 import React from "react";
 import classes from "./Layout.module.css";
 
@@ -11,20 +11,57 @@ const Layout = (props) => {
         <div className={classes.menu}>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <NavLink
+                to="/"
+                style={({ isActive, isPending }) => {
+                  return {
+                    color: isActive ? "red" : "inherit",
+                  };
+                }}
+                className={({ isActive, isPending }) => {
+                  return isActive ? "active" : isPending ? "pending" : "";
+                }}
+              >
+                Home
+              </NavLink>
             </li>
 
             <li>
-              <Link to="about">About</Link>
+              <NavLink
+                to="about"
+                style={({ isActive, isPending }) => {
+                  return {
+                    color: isActive ? "red" : "inherit",
+                  };
+                }}
+                className={({ isActive, isPending }) => {
+                  return isActive ? "active" : isPending ? "pending" : "";
+                }}
+              >
+                About
+              </NavLink>
             </li>
-
             <li>
-              <Link to="help">Help</Link>
+              <NavLink
+                to="contact"
+                style={({ isActive, isPending }) => {
+                  return {
+                    color: isActive ? "red" : "inherit",
+                  };
+                }}
+                className={({ isActive, isPending }) => {
+                  return isActive ? "active" : isPending ? "pending" : "";
+                }}
+              >
+                Contact
+              </NavLink>
             </li>
           </ul>
         </div>
       </nav>
-      <main className={classes.main}>{props.children}</main>
+      <div>
+        <main className={classes.main}>{props.children}</main>
+      </div>
       <footer className={classes.footer}>
         <p>This page &#169; by Rasel mia</p>
       </footer>

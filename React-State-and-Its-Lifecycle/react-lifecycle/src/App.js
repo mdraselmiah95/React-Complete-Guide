@@ -1,17 +1,27 @@
 import "./App.css";
-import { Router } from "@reach/router";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Help from "./pages/Help";
+
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Contact from "./pages/Contact";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "about",
+    element: <About />,
+  },
+  {
+    path: "contact",
+    element: <Contact />,
+  },
+]);
 
 function App() {
-  return (
-    <Router>
-      <Home path="/" />
-      <About path="about" />
-      <Help path="help" />
-    </Router>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
