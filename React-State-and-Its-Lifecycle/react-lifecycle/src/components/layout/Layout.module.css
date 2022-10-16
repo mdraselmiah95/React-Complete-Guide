@@ -16,6 +16,9 @@
   display: flex;
   gap: 1rem;
 }
+.menu ul a {
+  color: #fff;
+}
 .main {
   padding: 3rem;
 }

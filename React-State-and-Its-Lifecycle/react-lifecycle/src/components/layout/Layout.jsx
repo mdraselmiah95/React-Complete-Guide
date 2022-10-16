@@ -4,6 +4,12 @@ import classes from "./Layout.module.css";
 
 const Layout = (props) => {
   //   console.log(props:{children});
+  let activeStyle = {
+    textDecoration: "underline",
+    color: "green",
+    fontWeight: "700",
+  };
+
   return (
     <div>
       <nav className={classes.nav}>
@@ -13,14 +19,7 @@ const Layout = (props) => {
             <li>
               <NavLink
                 to="/"
-                style={({ isActive, isPending }) => {
-                  return {
-                    color: isActive ? "red" : "inherit",
-                  };
-                }}
-                className={({ isActive, isPending }) => {
-                  return isActive ? "active" : isPending ? "pending" : "";
-                }}
+                style={({ isActive }) => (isActive ? activeStyle : undefined)}
               >
                 Home
               </NavLink>
@@ -28,30 +27,16 @@ const Layout = (props) => {
 
             <li>
               <NavLink
-                to="about"
-                style={({ isActive, isPending }) => {
-                  return {
-                    color: isActive ? "red" : "inherit",
-                  };
-                }}
-                className={({ isActive, isPending }) => {
-                  return isActive ? "active" : isPending ? "pending" : "";
-                }}
+                to="/about"
+                style={({ isActive }) => (isActive ? activeStyle : undefined)}
               >
                 About
               </NavLink>
             </li>
             <li>
               <NavLink
-                to="contact"
-                style={({ isActive, isPending }) => {
-                  return {
-                    color: isActive ? "red" : "inherit",
-                  };
-                }}
-                className={({ isActive, isPending }) => {
-                  return isActive ? "active" : isPending ? "pending" : "";
-                }}
+                to="/contact"
+                style={({ isActive }) => (isActive ? activeStyle : undefined)}
               >
                 Contact
               </NavLink>
