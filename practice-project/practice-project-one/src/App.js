@@ -1,9 +1,10 @@
 import "./App.css";
+import AddUser from "./components/Users/AddUser";
 
 function App() {
   return (
     <div className="App">
-      <h2>This is new project.</h2>
+      <AddUser />
     </div>
   );
 }
