@@ -9,6 +9,7 @@ const AddUser = (props) => {
   const [enterUserAge, setEnterUserAge] = useState("");
   const [error, setError] = useState();
 
+  //Simple ways to handle anything.
   const addUserHandler = (e) => {
     e.preventDefault();
     if (enterUserName.trim().length === 0 || enterUserAge.trim() === 0) {
