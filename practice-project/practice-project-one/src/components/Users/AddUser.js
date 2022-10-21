@@ -33,6 +33,8 @@ const AddUser = (props) => {
       return;
     }
     props.onAddUser(enterName, enterAge);
+    nameInputRef.current.value = "";
+    ageInputRef.current.value = "";
     // setEnterUserAge("");
     // setEnterUserName("");
   };
