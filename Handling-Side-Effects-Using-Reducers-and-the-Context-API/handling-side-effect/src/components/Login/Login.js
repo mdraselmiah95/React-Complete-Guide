@@ -11,6 +11,7 @@ const Login = (props) => {
   const [passwordIsValid, setPasswordIsValid] = useState();
   const [formIsValid, setFormIsValid] = useState(false);
 
+  /*
   useEffect(() => {
     console.log("EFFECT RUNNING");
 
@@ -19,15 +20,16 @@ const Login = (props) => {
     };
   }, [enteredPassword]);
 
+*/
   useEffect(() => {
     const identifier = setTimeout(() => {
-      console.log("This is rendering.");
+      // console.log("This is rendering.");
       setFormIsValid(
         enteredEmail.includes("@") && enteredPassword.trim().length > 6
       );
     }, 500);
     return () => {
-      console.log("CLEANUP");
+      // console.log("CLEANUP");
       clearTimeout(identifier);
     };
   }, [enteredEmail, enteredPassword]);
