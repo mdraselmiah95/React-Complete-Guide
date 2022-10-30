@@ -5,23 +5,21 @@ import MainHeader from "./components/MainHeader/MainHeader";
 import Card from "./components/UI/Card/Card";
 
 // useReducer
-const initialState = { count: 0 };
+const initialValue = { num: 1 };
 
-function reducer(state, action) {
+function applyReducer(state, action) {
   switch (action.type) {
-    case "increment":
-      return { count: state.count + 1 };
-    case "decrement":
-      return { count: state.count - 1 };
+    case "plus":
+      return { num: state.num + 1 };
+    case "minus":
+      return { num: state.num - 1 };
     default:
       throw new Error();
   }
 }
-
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(applyReducer, initialValue);
 
   useEffect(() => {
     const storedInfo = localStorage.getItem("isLogged");
@@ -50,9 +48,9 @@ function App() {
 
       <Card>
         <div>
-          Count: {state.count}
-          <button onClick={() => dispatch({ type: "decrement" })}>-</button>
-          <button onClick={() => dispatch({ type: "increment" })}>+</button>
+          <h2>This is The True Value: {state.num}</h2>
+          <button onClick={() => dispatch({ type: "plus" })}>Increase</button>
+          <button onClick={() => dispatch({ type: "minus" })}>Decrease</button>
         </div>
       </Card>
     </React.Fragment>
