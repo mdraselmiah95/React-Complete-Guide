@@ -96,7 +96,6 @@ const Login = (props) => {
           </Button>
         </div>
       </form>
-      <div>gi</div>
     </Card>
   );
 };
