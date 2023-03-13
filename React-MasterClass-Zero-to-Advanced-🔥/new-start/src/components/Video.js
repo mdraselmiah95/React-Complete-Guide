@@ -1,7 +1,8 @@
 import React from "react";
 import "./Video.css";
 
-const Video = ({ title, channel = "Code DUD", views, time, verified }) => {
+const Video = ({ video }) => {
+  const { title, channel = "Code DUD", views, time, verified } = video;
   // let channelJSX;
   // if (verified) {
   //   channelJSX = <div className="channel">{channel} ✅</div>;
