@@ -1,7 +1,7 @@
 import React from "react";
 import "./Video.css";
 
-const Video = ({ title, channel, views, time }) => {
+const Video = ({ title, channel = "Code DUD", views, time }) => {
   return (
     <>
       <div className="container">
