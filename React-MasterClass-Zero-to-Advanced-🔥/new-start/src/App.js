@@ -1,19 +1,11 @@
-import "./App.css";
+import Video from "./components/Video";
 
 function App() {
-  const name = "This is Rasel";
   return (
-    <div className="App-header">
-      <h2>{name}</h2>
-      <Demo />
-    </div>
-  );
-}
-
-function Demo() {
-  return (
-    <div className="App-header">
-      <h2>This is a Demo Tool.</h2>
+    <div>
+      <h2>This is App.</h2>
+      <Video title="ReactJs Learning" />
+      <Video title="NodeJs Learning" />
     </div>
   );
 }
