@@ -1,9 +1,10 @@
 import Video from "./components/Video";
+import "./App.css";
 
 function App() {
   return (
-    <div>
-      <h2>This is App.</h2>
+    <div className="App">
+      <h2>Videos:</h2>
       <Video title="ReactJs Learning" />
       <Video title="NodeJs Learning" />
     </div>
