@@ -1,7 +1,14 @@
 import React from "react";
 import "./Video.css";
 
-const Video = ({ title, channel = "Code DUD", views, time }) => {
+const Video = ({ title, channel = "Code DUD", views, time, verified }) => {
+  // let channelJSX;
+  // if (verified) {
+  //   channelJSX = <div className="channel">{channel} ✅</div>;
+  // } else {
+  //   channelJSX = <div className="channel">{channel}</div>;
+  // }
+
   return (
     <>
       <div className="container">
@@ -9,7 +16,11 @@ const Video = ({ title, channel = "Code DUD", views, time }) => {
           <img src="https://picsum.photos/seed/picsum/300/300" alt="Tower" />
         </div>
         <div className="title">{title}</div>
-        <div className="clannel">{channel}</div>
+        <div className="channel">
+          {channel}
+          {verified && "✅"}
+        </div>
+        ;
         <div className="views">
           {views} views <span>.</span> {time}
         </div>
