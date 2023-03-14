@@ -2,14 +2,14 @@ import React from "react";
 import PlayButton from "./PlayButton";
 import Video from "./Video";
 
-const VideoList = ({ videos, deleteVideo, editVideo }) => {
+const VideoList = ({ videos, editVideo, dispatch }) => {
   return (
     <>
       {videos.map((video) => (
         <Video
           key={video.id}
           video={video}
-          deleteVideo={deleteVideo}
+          dispatch={dispatch}
           editVideo={editVideo}
         >
           <PlayButton
