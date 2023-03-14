@@ -1,12 +1,13 @@
 import Video from "./components/Video";
 import "./App.css";
-import videoCollection from "./components/data/data";
+import videoCollection from "./data/data";
 import PlayButton from "./components/PlayButton";
+import AddVideo from "./components/AddVideo";
 
 function App() {
   return (
     <div className="App">
-      <h2>Videos:</h2>
+      <AddVideo />
       {videoCollection.map((video) => (
         <Video video={video} key={video.name || video.id}>
           <PlayButton
@@ -17,11 +18,6 @@ function App() {
           </PlayButton>
         </Video>
       ))}
-      <div style={{ clear: "both" }}>
-        {/* <PlayButton message="play-msg" onPlay={()=>console.log('Play')} onPause={()=>console.log('Pause')}>Play</PlayButton> */}
-
-        {/* <PlayButton message="pause-msg" onSmash={()=>alert('Playyy')}>Pause</PlayButton> */}
-      </div>
     </div>
   );
 }
