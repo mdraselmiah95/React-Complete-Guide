@@ -1,7 +1,7 @@
 import React from "react";
 import "./Video.css";
 
-const Video = ({ video, deleteVideo }) => {
+const Video = ({ video, deleteVideo, editVideo }) => {
   const { title, channel = "Code DUD", views, time, verified, id } = video;
 
   return (
@@ -9,6 +9,9 @@ const Video = ({ video, deleteVideo }) => {
       <div className="container">
         <button className="close" onClick={() => deleteVideo(id)}>
           X
+        </button>
+        <button className="edit" onClick={() => editVideo(id)}>
+          EDIT
         </button>
         <div className="pic">
           <img src={`https://picsum.photos/id/${id}/160/90`} alt="Tower" />

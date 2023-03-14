@@ -6,6 +6,7 @@ import VideoList from "./components/VideoList";
 
 function App() {
   const [videos, setVideos] = useState(videoDB);
+  const [editableVideo, setEditableVideo] = useState(null);
 
   function addVideo(video) {
     setVideos([
@@ -17,12 +18,22 @@ function App() {
     ]);
   }
 
-  function deleteVideo(id) {}
+  function deleteVideo(id) {
+    setVideos(videos.filter((video) => video.id !== id));
+  }
+
+  function editVideo(id) {
+    setEditableVideo(videos.find((video) => video.id === id));
+  }
 
   return (
     <div className="App">
-      <AddVideo addVideo={addVideo}></AddVideo>
-      <VideoList videos={videos} deleteVideo={deleteVideo}></VideoList>
+      <AddVideo addVideo={addVideo} editableVideo={editableVideo}></AddVideo>
+      <VideoList
+        videos={videos}
+        deleteVideo={deleteVideo}
+        editVideo={editVideo}
+      ></VideoList>
     </div>
   );
 }

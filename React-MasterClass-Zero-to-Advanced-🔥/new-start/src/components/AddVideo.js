@@ -1,12 +1,21 @@
 import React, { useState } from "react";
 import "./AddVideo.css";
 
-const AddVideo = ({ addVideo }) => {
-  const [video, setVideo] = useState({});
+const initialState = {
+  time: "1 month ago",
+  channel: "Coder Dost",
+  verified: true,
+  title: "",
+  views: "",
+};
+
+const AddVideo = ({ addVideo, editableVideo }) => {
+  const [video, setVideo] = useState(initialState);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     addVideo(video);
+    setVideo("");
   };
 
   const handleChange = (e) => {
@@ -24,14 +33,14 @@ const AddVideo = ({ addVideo }) => {
         name="title"
         onChange={handleChange}
         placeholder="title"
-        value={video.title}
+        value={video.title || ""}
       />
       <input
         type="text"
         name="views"
         onChange={handleChange}
         placeholder="views"
-        value={video.views}
+        value={video.views || ""}
       />
       <button onClick={handleSubmit}>Add Video</button>
     </form>
