@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./AddVideo.css";
 
-const AddVideo = () => {
+const AddVideo = ({ addVideo }) => {
+  const [video, setVideo] = useState({});
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("click");
+    addVideo(video);
+  };
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    setVideo({
+      ...video,
+      [e.target.name]: e.target.value,
+    });
   };
 
   return (
@@ -12,16 +22,16 @@ const AddVideo = () => {
       <input
         type="text"
         name="title"
-        //   onChange={handleChange}
+        onChange={handleChange}
         placeholder="title"
-        //   value={video.title}
+        value={video.title}
       />
       <input
         type="text"
         name="views"
-        //   onChange={handleChange}
+        onChange={handleChange}
         placeholder="views"
-        //   value={video.views}
+        value={video.views}
       />
       <button onClick={handleSubmit}>Add Video</button>
     </form>
