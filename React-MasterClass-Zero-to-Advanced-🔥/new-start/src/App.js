@@ -17,10 +17,12 @@ function App() {
     ]);
   }
 
+  function deleteVideo(id) {}
+
   return (
     <div className="App">
       <AddVideo addVideo={addVideo}></AddVideo>
-      <VideoList videos={videos}></VideoList>
+      <VideoList videos={videos} deleteVideo={deleteVideo}></VideoList>
     </div>
   );
 }

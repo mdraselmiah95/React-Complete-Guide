@@ -1,12 +1,15 @@
 import React from "react";
 import "./Video.css";
 
-const Video = ({ video }) => {
+const Video = ({ video, deleteVideo }) => {
   const { title, channel = "Code DUD", views, time, verified, id } = video;
 
   return (
     <>
       <div className="container">
+        <button className="close" onClick={() => deleteVideo(id)}>
+          X
+        </button>
         <div className="pic">
           <img src={`https://picsum.photos/id/${id}/160/90`} alt="Tower" />
         </div>
