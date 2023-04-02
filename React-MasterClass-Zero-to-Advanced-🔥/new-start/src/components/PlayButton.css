@@ -1,6 +1,4 @@
 button {
-  background-color: black;
-  border: 1px solid yellow;
   padding: 1em;
   border-radius: 1em;
   color: white;
@@ -9,4 +7,14 @@ button {
 button:hover {
   background-color: grey;
   color: white;
+}
+
+button.darkMode {
+  background-color: black;
+  border: 1px solid yellow;
+}
+
+button.lightMode {
+  background-color: #666;
+  border: 1px solid black;
 }

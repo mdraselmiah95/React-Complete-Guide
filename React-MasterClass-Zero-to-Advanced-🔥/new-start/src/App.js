@@ -1,11 +1,15 @@
 import "./App.css";
 import AddVideo from "./components/AddVideo";
 import videoDB from "./data/data";
-import { useReducer, useState } from "react";
+import { useContext, useReducer, useState } from "react";
 import VideoList from "./components/VideoList";
+import ThemeContext from "./context/ThemeContext";
 
 function App() {
   const [editableVideo, setEditableVideo] = useState(null);
+
+  const themeContext = useContext(ThemeContext);
+  console.log({ themeContext });
 
   function videoReducer(videos, action) {
     switch (action.type) {
@@ -30,17 +34,17 @@ function App() {
     setEditableVideo(videos.find((video) => video.id === id));
   }
   return (
-    <div className="App">
-      <AddVideo dispatch={dispatch} editableVideo={editableVideo}></AddVideo>
-      <VideoList
-        videos={videos}
-        dispatch={dispatch}
-        editVideo={editVideo}
-      ></VideoList>
-    </div>
+    <ThemeContext.Provider>
+      <div className="App">
+        <AddVideo dispatch={dispatch} editableVideo={editableVideo}></AddVideo>
+        <VideoList
+          videos={videos}
+          dispatch={dispatch}
+          editVideo={editVideo}
+        ></VideoList>
+      </div>
+    </ThemeContext.Provider>
   );
 }
 
 export default App;
-
-// This is the greatest the gone
