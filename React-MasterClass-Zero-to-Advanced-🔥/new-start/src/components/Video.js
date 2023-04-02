@@ -1,20 +1,33 @@
 import React, { useContext, useEffect } from "react";
 import "./Video.css";
+import axios from "axios";
 import ThemeContext from "../context/ThemeContext";
 
 const Video = ({ video, dispatch, editVideo }) => {
   const { title, channel = "Code DUD", views, time, verified, id } = video;
   const theme = useContext(ThemeContext);
 
-  useEffect(() => {
-    setInterval(() => {
-      console.log("Video Playing");
-    }, 3000);
-  }, []);
+  const URL = "https://jsonplaceholder.typicode.com/users ";
+
+  const fetchData = async () => {
+    const { data } = await axios.get(URL);
+    console.log(data);
+  };
+
+  // useEffect(() => {
+  //   setInterval(() => {
+  //     console.log("Video Playing", id);
+  //   }, 3000);
+  //   return () => {
+  //     clearInterval(id);
+  //   };
+  // }, [id]);
+
+  // /https://jsonplaceholder.typicode.com/users
 
   return (
     <>
-      <div className={`container ${theme}`}>
+      <diyv className={`container ${theme}`}>
         <button
           className="close"
           onClick={() => dispatch({ type: "DELETE", payload: id })}
@@ -35,7 +48,8 @@ const Video = ({ video, dispatch, editVideo }) => {
         <div className="views">
           {views} views <span>.</span> {time}
         </div>
-      </div>
+      </diyv>
+      <button onClick={fetchData}>DATA</button>
     </>
   );
 };
