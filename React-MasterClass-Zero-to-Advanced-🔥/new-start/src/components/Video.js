@@ -1,10 +1,16 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./Video.css";
 import ThemeContext from "../context/ThemeContext";
 
 const Video = ({ video, dispatch, editVideo }) => {
   const { title, channel = "Code DUD", views, time, verified, id } = video;
   const theme = useContext(ThemeContext);
+
+  useEffect(() => {
+    setInterval(() => {
+      console.log("Video Playing");
+    }, 3000);
+  }, []);
 
   return (
     <>
