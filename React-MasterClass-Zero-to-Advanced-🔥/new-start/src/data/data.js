@@ -4,7 +4,7 @@ const videos = [
     title: "React JS tutorial",
     views: "999K",
     time: "1 year ago",
-    channel: "Coder Dost",
+    channel: "Coder iuo",
     verified: true,
   },
   {

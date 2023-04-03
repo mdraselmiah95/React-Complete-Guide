@@ -1,10 +1,4 @@
-import React, {
-  forwardRef,
-  useEffect,
-  useImperativeHandle,
-  useRef,
-  useState,
-} from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import "./AddVideo.css";
 
 const initialState = {
@@ -17,13 +11,18 @@ const initialState = {
 
 const AddVideo = ({ editableVideo, dispatch }, useRef) => {
   const [video, setVideo] = useState(initialState);
-  const inputRef = useRef(null);
 
-  useImperativeHandle(() => {
-    return {
-      focus() {},
-    };
-  }, []);
+  // const iRef = useRef(null);
+  // useImperativeHandle(() => {
+  //   return {
+  //     focus() {},
+  //   };
+  // }, []);
+
+  // useLayoutEffect(() => {
+  //   const { height } = ref.current.getBoundingClientRect();
+  //   console.log(height);
+  // }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -52,17 +51,16 @@ const AddVideo = ({ editableVideo, dispatch }, useRef) => {
     });
 */
 
-  useEffect(() => {
-    if (editableVideo) {
-      setVideo(editableVideo);
-    }
-    inputRef.current.focus();
-  }, [editableVideo]);
+  // useEffect(() => {
+  //   if (editableVideo) {
+  //     setVideo(editableVideo);
+  //   }
+  //   inputRef.current.focus();
+  // }, [editableVideo]);
 
   return (
     <form style={{ padding: "10px" }}>
       <input
-        ref={inputRef}
         type="text"
         name="title"
         onChange={handleChange}
