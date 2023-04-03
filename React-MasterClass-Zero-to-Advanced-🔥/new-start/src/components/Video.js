@@ -6,6 +6,7 @@ import ThemeContext from "../context/ThemeContext";
 const Video = ({ video, dispatch, editVideo }) => {
   const { title, channel = "Code DUD", views, time, verified, id } = video;
   const theme = useContext(ThemeContext);
+  console.log("render Video", id);
 
   const URL = "https://jsonplaceholder.typicode.com/users ";
 

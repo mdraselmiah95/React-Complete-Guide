@@ -1,4 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, {
+  forwardRef,
+  useEffect,
+  useImperativeHandle,
+  useRef,
+  useState,
+} from "react";
 import "./AddVideo.css";
 
 const initialState = {
@@ -9,9 +15,15 @@ const initialState = {
   views: "",
 };
 
-const AddVideo = ({ editableVideo, dispatch }) => {
+const AddVideo = ({ editableVideo, dispatch }, useRef) => {
   const [video, setVideo] = useState(initialState);
   const inputRef = useRef(null);
+
+  useImperativeHandle(() => {
+    return {
+      focus() {},
+    };
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
