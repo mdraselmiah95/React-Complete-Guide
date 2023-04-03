@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useCallback } from "react";
 import PlayButton from "./PlayButton";
 import Video from "./Video";
 
 const VideoList = ({ videos, editVideo, dispatch }) => {
+  const play = useCallback(() => console.log("Playing.."), []);
+  const pause = useCallback(() => console.log("pause"), []);
   return (
     <>
       {videos.map((video) => (
@@ -12,10 +14,7 @@ const VideoList = ({ videos, editVideo, dispatch }) => {
           dispatch={dispatch}
           editVideo={editVideo}
         >
-          <PlayButton
-            onPlay={() => console.log("Playing..", video.title)}
-            onPause={() => console.log("Paused..", video.title)}
-          >
+          <PlayButton onPlay={play} onPause={pause}>
             {video.title}
           </PlayButton>
         </Video>

@@ -27,7 +27,7 @@ const Video = ({ video, dispatch, editVideo }) => {
 
   return (
     <>
-      <diyv className={`container ${theme}`}>
+      <div className={`container ${theme}`}>
         <button
           className="close"
           onClick={() => dispatch({ type: "DELETE", payload: id })}
@@ -48,7 +48,7 @@ const Video = ({ video, dispatch, editVideo }) => {
         <div className="views">
           {views} views <span>.</span> {time}
         </div>
-      </diyv>
+      </div>
       <button onClick={fetchData}>DATA</button>
     </>
   );
