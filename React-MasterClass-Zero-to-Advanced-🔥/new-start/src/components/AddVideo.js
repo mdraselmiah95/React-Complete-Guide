@@ -1,4 +1,6 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
+import { createPortal } from "react-dom";
+
 import "./AddVideo.css";
 
 const initialState = {
@@ -77,6 +79,10 @@ const AddVideo = ({ editableVideo, dispatch }, useRef) => {
       <button onClick={handleSubmit}>
         {editableVideo ? "EDIT" : "ADD"}-VIDEO
       </button>
+      {createPortal(
+        <p>This child is placed in the document body.</p>,
+        document.getElementById("rootOne")
+      )}
     </form>
   );
 };

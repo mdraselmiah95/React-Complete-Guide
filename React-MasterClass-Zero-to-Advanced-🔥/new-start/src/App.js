@@ -35,9 +35,6 @@ function App() {
 
   return (
     <>
-      <div className={`App ${themeContext}`}>
-        {/* <AddVideo dispatch={dispatch} editableVideo={editableVideo}></AddVideo> */}
-      </div>
       <div>
         <button
           onClick={() => setShow(true)}
