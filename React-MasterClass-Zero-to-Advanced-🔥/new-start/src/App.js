@@ -4,6 +4,7 @@ import videoDB from "./data/data";
 import { useContext, useReducer, useState, lazy, Suspense } from "react";
 import ThemeContext from "./context/ThemeContext";
 import { BallTriangle } from "react-loader-spinner";
+import Counter from "./components/Counter";
 // import Dummy from "./components/Dummy";
 
 const Dummy = lazy(() => import("./components/Dummy.js"));
@@ -36,6 +37,7 @@ function App() {
   return (
     <>
       <div>
+        <Counter />
         <button
           onClick={() => setShow(true)}
           style={{ padding: "1rem 2rem", color: "black", fontWeight: "bolder" }}
